@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una tecla un color</title>
+    <style>
+        #key {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: solid black 1px;
+        }
+
+        .nuevo-div {
+            width: 200px;
+            height: 200px;
+            border: solid black 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="key""></div>
+
+    <script>
+        const caja = document.getElementById('key')
+        let colorFondo = document.addEventListener('keydown', (event) => {
+            if (event.key === 'a' || event.key === 'A') {
+                colorFondo = 'pink'
+                caja.style.backgroundColor = colorFondo
+            }
+            else if (event.key === 's' || event.key === 'S') {
+                colorFondo = 'orange'
+                caja.style.backgroundColor = colorFondo
+            }
+            else if (event.key === 'd' || event.key === 'D') {
+                colorFondo = 'skyblue'
+                caja.style.backgroundColor = colorFondo
+            }
+        })
+
+        function crearDiv(color) {
+            const nuevoDiv = document.createElement('div')
+            nuevoDiv.className = 'nuevo-div'
+            nuevoDiv.style.backgroundColor = color
+            document.body.appendChild(nuevoDiv)
+        }
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'q' || event.key === 'Q') {
+                crearDiv('purple')
+            }
+            else if (event.key === 'w' || event.key === 'W') {
+                crearDiv('grey')
+            }
+            else if (event.key === 'e' || event.key === 'E') {
+                crearDiv('brown')
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

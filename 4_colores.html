@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Colores</title>
+</head>
+
+<body>
+    <div id="blue" style="
+        width: 200px;
+        height: 200px;
+        background-color: blue;"></div>
+    <div id="red" style="
+    width: 200px;
+    height: 200px;
+    background-color: red"></div>
+    <div id="green" style="
+    width: 200px;
+    height: 200px;
+    background-color: green"></div>
+    <div id="yellow" style="
+    width: 200px;
+    height: 200px;
+    background-color: yellow"></div>
+
+    <script>
+        let colorAzul = document.getElementById('blue')
+        let colorRojo = document.getElementById('red')
+        let colorVerde = document.getElementById('green')
+        let colorAmarillo = document.getElementById('yellow')
+
+        function cambiarColor(color) {
+            color.target.style.backgroundColor = 'black'
+        }
+
+        colorAzul.addEventListener('click', (color) => {
+            cambiarColor(color)
+        })
+        colorRojo.addEventListener('click', (color) => {
+            cambiarColor(color)
+        })
+        colorVerde.addEventListener('click', (color) => {
+            cambiarColor(color)
+        })
+        colorAmarillo.addEventListener('click', (color) => {
+            cambiarColor(color)
+        })</script>
+</body>
+
+</html>
